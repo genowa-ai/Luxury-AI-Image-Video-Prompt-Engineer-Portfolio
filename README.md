@@ -25,9 +25,12 @@ exclusive events
 
 **Portfolio Showcase**
 
-**Candidate Name:** [Your Name Here]
+**Candidate Name:** [Eugene Wata]
+
 **Role Applied For:** Prompt Engineer Ops / Luxuxry-AI-Image-Video
-**Availability:** [Imediate on confirmation]
+
+**Availability:** [Immediately Available]
+
 **Portfolio Link:** [https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio]
 
 ---
@@ -50,7 +53,8 @@ This portfolio demonstrates proficiency in LLM configurations(Parameter, tempera
 
 ### Prompt Snippet (The Engineered Input)
 The prompt utilized strict contextual framing through `[SYSTEM]` and `[ROLE]` prompting techniques to force professional output standards, controlling elements like lighting and focus.
-System prompting sets the overall context and purpose for the language model. And Role prompting assigns a specific character or identity for the language model to adopt.
+System prompting sets the overall context and purpose for the language model. 
+And Role prompting assigns a specific character or identity for the language model to adopt.
 
 [SYSTEM: You are a world-class luxury jewelry photographer for Cartier. Your expertise is ultra-high-resolution, studio-lit product photography that highlights craftsmanship, sparkle, and exclusivity. NEVER include watermarks, text, or logos.]
 
@@ -100,6 +104,7 @@ An ultra-sharp image showing the steel bracelet with a realistic brushed texture
 ---
 ## 3. Example: Luxury Interior (Chain-of-Thought + Step-Back)
 Chain of Thought (CoT) a technique for reasoning capabilities of LLMs by generating intermediate reasoning steps.
+
 And Step-back prompting is a by prompting the LLM to first consider a general question related to the specific task at hand, and then feeding the answer to that general question into a subsequent prompt for the specific task.
 
 **Goal:** Create a photorealistic wide-angle image of a minimalist luxury living room at golden hour, controlling complexity (clutter) by decomposing the request into discrete, verifiable steps.
@@ -158,6 +163,9 @@ A 3-second sequence (30 frames @ 10 FPS). While movement is subtle due to seed v
 
 **Resulting Video:**
 *(The video demonstrates transitions between the three subjects at a manageable pace.)*
-![jewelry_sequence](jewelry_sequence_3sec_stable.mp4)
+<video width="600" controls>
+  <source src="https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio/blob/main/jewelry_sequence_3sec_stable.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 **Note:** The successful generation of 30+ frames per distinct subject package confirms the ability to engineer and prepare asset batches suitable for post-processing assembly (like in FFMPEG).
