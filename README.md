@@ -23,18 +23,16 @@ luxury real estate
 
 exclusive events
 
-These are examples only for luxury branding.  Show casing guiding AI systems through structured prompts and refining outputs until the desired visual presentation is achieved.
-
-# AI Prompt Engineering Portfolio Showcase
+**Portfolio Showcase**
 
 **Candidate Name:** [Your Name Here]
-**Role Applied For:** Prompt Engineer / Generative AI Specialist
-**Availability:** [Insert your actual availability here, e.g., Available immediately, ready to start next Monday.]
-**Portfolio Link:** [Link to this specific GitHub Repository]
+**Role Applied For:** Prompt Engineer Ops / Luxuxry-AI-Image-Video
+**Availability:** [Imediate on confirmation]
+**Portfolio Link:** [https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio]
 
 ---
 ## Executive Summary
-This portfolio demonstrates proficiency in leveraging structured prompting methodologies (System/Role, Few-Shot, Chain-of-Thought) with Stable Diffusion v1.5 to generate photorealistic, high-end luxury assets. Configuration data and prompt logic are detailed below, showcasing the ability to constrain model output for specific visual fidelity and structure assets for video sequencing.
+This portfolio demonstrates proficiency in LLM configurations(Parameter, temperature, seed) and Prompt engineering techniques (System/Role, Few-Shot, Chain-of-Thought) with Stable Diffusion v1.5 to generate photorealistic, high-end luxury assets. Configuration data and prompt logic are detailed below, showcasing the ability to constrain model output for specific visual presentation and structure assets for video sequencing. These are examples only for luxury branding.  Show casing guiding AI systems through structured prompts and refining outputs until the desired visual presentation is achieved.
 
 ---
 ## 1. Example: Fine Jewelry (System + Role Prompting)
@@ -51,20 +49,25 @@ This portfolio demonstrates proficiency in leveraging structured prompting metho
 | **Seed** | **42** |
 
 ### Prompt Snippet (The Engineered Input)
-The prompt utilized strict contextual framing via `[SYSTEM]` and `[ROLE]` tags to force professional output standards, controlling elements like lighting and focus.
+The prompt utilized strict contextual framing through `[SYSTEM]` and `[ROLE]` prompting techniques to force professional output standards, controlling elements like lighting and focus.
+System prompting sets the overall context and purpose for the language model. And Role prompting assigns a specific character or identity for the language model to adopt.
 
 [SYSTEM: You are a world-class luxury jewelry photographer for Cartier. Your expertise is ultra-high-resolution, studio-lit product photography that highlights craftsmanship, sparkle, and exclusivity. NEVER include watermarks, text, or logos.]
+
 [ROLE: As the photographer, describe the shot EXACTLY as you would instruct a junior photographer.]
 Create a hyper-realistic macro photograph of a 5-carat cushion-cut lab-grown diamond solitaire engagement ring, set in 18-karat rose gold. The ring rests elegantly on deep-black velvet. Use Rembrandt lighting from upper-left: soft key light (45°) to make the diamond sparkle, + a subtle fill light to reveal metal texture. Capture EVERY facet of the diamond — fire, brilliance, and ice-like clarity. Show microscopic details: brushed rose-gold finish, prong texture, and velvet nap. Technical specs: Camera: Hasselblad H6D-400c (100 MP), Lens: 120mm macro, f/2.8, Aperture: f/11.
+
 NEGATIVE PROMPT: blurry, low quality, text, watermark, logo, fingerprint, dust, cartoon, deformed, glassy
 
 ### Output Visualization
+A crisp image where the diamond shows clear fire and ice. The rose-gold metal texture is subtly visible. Velvet nap is defined. Zero branding elements.
 
 **Resulting Image:**
 ![Jewelry Macro Shot](image_01_jewelry_role.png)
 
 ---
 ## 2. Example: Luxury Watch (Few-Shot Prompting)
+Few shot provides multiple examples to the model.
 
 **Goal:** Generate a studio shot of a stainless-steel watch on polished granite, achieving a realistic brushed metal finish by modeling style based on provided examples.
 
@@ -89,12 +92,15 @@ Generate a photo of: Audemars Piguet Royal Oak Chronograph (blue dial, stainless
 NEGATIVE PROMPT: text, logo, watermark, hand, plastic, cheap look, blurry
 
 ### Output Visualization
+An ultra-sharp image showing the steel bracelet with a realistic brushed texture, reflecting the studio lights correctly. The blue dial texture is visible against the mirror-like granite surface.
 
 **Resulting Image:**
 ![Watch Studio Shot](image_02_watch_fewshot.png)
 
 ---
 ## 3. Example: Luxury Interior (Chain-of-Thought + Step-Back)
+Chain of Thought (CoT) a technique for reasoning capabilities of LLMs by generating intermediate reasoning steps.
+And Step-back prompting is a by prompting the LLM to first consider a general question related to the specific task at hand, and then feeding the answer to that general question into a subsequent prompt for the specific task.
 
 **Goal:** Create a photorealistic wide-angle image of a minimalist luxury living room at golden hour, controlling complexity (clutter) by decomposing the request into discrete, verifiable steps.
 
@@ -125,6 +131,7 @@ Photorealistic interior photograph of a minimalist luxury living room matching a
 NEGATIVE PROMPT: clutter, furniture overload, people, text, logo, cartoon, sketch, cheap furniture, overcast, bright daylight
 
 ### Output Visualization
+A photorealistic, wide shot with dominant warm tones from the golden hour. Architectural details are crisp, and the foliage outside the large windows creates a soft, desirable bokeh effect. The scene adheres strictly to the minimalist decoration specified.
 
 **Resulting Image:**
 ![Interior Scene](image_03_interior_cot.png)
@@ -147,13 +154,10 @@ NEGATIVE PROMPT: clutter, furniture overload, people, text, logo, cartoon, sketc
 Due to the 77-token limit on sequential instructions in standard SD pipelines, the frame-counting token was removed or severely shortened (`Render frame X.`). Consistency relies on the **fixed base prompt** combined with **minimal seed variation** across the batch.
 
 ### Output Visualization
+A 3-second sequence (30 frames @ 10 FPS). While movement is subtle due to seed variation, the high consistency proves the ability to engineer an entire batch of assets using precise, constrained prompting for video sequencing.
 
-**Resulting Video (6-Second Reel of 3 Assets):**
+**Resulting Video:**
 *(The video demonstrates transitions between the three subjects at a manageable pace.)*
-
-<video width="600" controls>
-  <source src="luxury_reel_3subjects_6sec.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![jewelry_sequence](jewelry_sequence_3sec_stable.mp4)
 
 **Note:** The successful generation of 30+ frames per distinct subject package confirms the ability to engineer and prepare asset batches suitable for post-processing assembly (like in FFMPEG).
