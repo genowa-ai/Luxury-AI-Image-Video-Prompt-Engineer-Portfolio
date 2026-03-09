@@ -54,6 +54,7 @@ This portfolio demonstrates proficiency in LLM configurations(Parameter, tempera
 ### Prompt Snippet (The Engineered Input)
 The prompt utilized strict contextual framing through `[SYSTEM]` and `[ROLE]` prompting techniques to force professional output standards, controlling elements like lighting and focus.
 System prompting sets the overall context and purpose for the language model. 
+
 And Role prompting assigns a specific character or identity for the language model to adopt.
 
 [SYSTEM: You are a world-class luxury jewelry photographer for Cartier. Your expertise is ultra-high-resolution, studio-lit product photography that highlights craftsmanship, sparkle, and exclusivity. NEVER include watermarks, text, or logos.]
@@ -66,7 +67,6 @@ NEGATIVE PROMPT: blurry, low quality, text, watermark, logo, fingerprint, dust, 
 ### Output Visualization
 A crisp image where the diamond shows clear fire and ice. The rose-gold metal texture is subtly visible. Velvet nap is defined. Zero branding elements.
 
-**Resulting Image:**
 ![Jewelry Macro Shot](image_01_jewelry_role.png)
 
 ---
@@ -98,7 +98,6 @@ NEGATIVE PROMPT: text, logo, watermark, hand, plastic, cheap look, blurry
 ### Output Visualization
 An ultra-sharp image showing the steel bracelet with a realistic brushed texture, reflecting the studio lights correctly. The blue dial texture is visible against the mirror-like granite surface.
 
-**Resulting Image:**
 ![Watch Studio Shot](image_02_watch_fewshot.png)
 
 ---
@@ -138,7 +137,6 @@ NEGATIVE PROMPT: clutter, furniture overload, people, text, logo, cartoon, sketc
 ### Output Visualization
 A photorealistic, wide shot with dominant warm tones from the golden hour. Architectural details are crisp, and the foliage outside the large windows creates a soft, desirable bokeh effect. The scene adheres strictly to the minimalist decoration specified.
 
-**Resulting Image:**
 ![Interior Scene](image_03_interior_cot.png)
 
 ---
@@ -162,10 +160,8 @@ Due to the 77-token limit on sequential instructions in standard SD pipelines, t
 A 3-second sequence (30 frames @ 10 FPS). While movement is subtle due to seed variation, the high consistency proves the ability to engineer an entire batch of assets using precise, constrained prompting for video sequencing.
 
 **Resulting Video:**
-*(The video demonstrates transitions between the three subjects at a manageable pace.)*
-<video width="600" controls>
-  <source src="https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio/blob/main/jewelry_sequence_3sec_stable.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+*(The video demonstrates the original 3-second sequence where fast changes were observed. Click the link to view the asset in a new tab.)*
+
+**Video Link (Click to View Externally):** [https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio/blob/main/jewelry_sequence_3sec_stable.mp4](https://github.com/genowa-ai/Luxury-AI-Image-Video-Prompt-Engineer-Portfolio/blob/main/jewelry_sequence_3sec_stable.mp4)
 
 **Note:** The successful generation of 30+ frames per distinct subject package confirms the ability to engineer and prepare asset batches suitable for post-processing assembly (like in FFMPEG).
